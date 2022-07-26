@@ -54,10 +54,7 @@ export const forgotPasswordAction = (payload, cb = () => { }) => {
             .then((res) => {
                 if (res?.data?.success) {
                     cb(true)
-                    dispatch({
-                        type: SET_USER_INFO,
-                        payload: res?.data?.data
-                    })
+
                 }
                 else {
                     cb(false)
