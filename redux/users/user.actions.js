@@ -67,3 +67,12 @@ export const forgotPasswordAction = (payload, cb = () => { }) => {
     }
 }
 
+
+export const LogoutUserAction = () => {
+    return (dispatch, getState) => {
+        dispatch({
+            type: SET_USER_INFO,
+            payload: null
+        })
+    }
+}
